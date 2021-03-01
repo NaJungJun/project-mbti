@@ -1,0 +1,24 @@
+
+
+
+    .profiles-detail {
+        display: flex;
+        flex-direction: row;
+      
+        .pictures {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            border-radius: 50%;
+        }
+        .maker-name {
+            display: flex;
+            align-items: center;
+            margin-left: 2rem;
+        }
+    }
+
+    .profiles-detail + .profiles-detail {
+        margin-top: 2rem;
+    }
+    
