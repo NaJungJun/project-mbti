@@ -1,9 +1,13 @@
 
 
-
+    
     .profiles-detail {
+        border-radius: 16px;
+        background-color: #fff;
         display: flex;
         flex-direction: row;
+        padding: 3rem;
+        box-shadow: 0 8px 6px -6px black;
       
         .pictures {
             width: 100px;
@@ -16,9 +20,18 @@
             align-items: center;
             margin-left: 2rem;
         }
+        
+        .maker-desc {
+            display: flex;
+            margin-left: 2rem;
+        }
     }
 
     .profiles-detail + .profiles-detail {
         margin-top: 2rem;
     }
     
+
+
+
+   
