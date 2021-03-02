@@ -1,15 +1,14 @@
 import React from "react";
 
-const AnswerBox = ({ FIRST_ANSWER, SECOND_ANSWER, onClickAnswerHandler, idx, value }) => {
-
+const AnswerBox = ({ FIRST_ANSWER, SECOND_ANSWER, idx, value, onClickListHandler }) => {
     return(
         <>
             <span>Q{idx+1}. {value[0]}</span>
             <section>
-                <button id={FIRST_ANSWER} onClick={e => onClickAnswerHandler(e)}>
+                <button id={FIRST_ANSWER} onClick={onClickListHandler}>
                     {value[1]}
                 </button>
-                <button id={SECOND_ANSWER} onClick={e => onClickAnswerHandler(e)}>
+                <button id={SECOND_ANSWER} onClick={onClickListHandler}>
                     {value[2]}
                 </button>
             </section>
