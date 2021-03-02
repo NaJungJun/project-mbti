@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import AnswerBox from '../components/AnswerBox';
 import { FIRST_ANSWER, SECOND_ANSWER, TEST_LIST } from "../utils/plainText";
+
 import '../styles/Test.scss';
 
 function Test({history}) {
@@ -31,6 +32,7 @@ function Test({history}) {
     };
 
     return (
+
         <article className={'test'}>
             <progress max={TEST_LIST.length} value={idx+1} />
             <AnswerBox
@@ -42,6 +44,7 @@ function Test({history}) {
                 value={TEST_LIST[idx]}
             />
         </article>
+        
     )
 }
 
