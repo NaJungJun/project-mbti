@@ -7,8 +7,13 @@ import '../styles/Test.scss';
 function Test({history}) {
     const [idx, setIdx] = useState(0);
     const [answer, setAnswer] = useState('');
+    const [flag, setFlag] = useState(false);
     useEffect(() => {
-        if( answer.length === 12 ){
+        setFlag( answer.length >= 12 );
+    },[answer.length]);
+
+    const makeType = () => {
+        if(flag){
             let type='';
             const uniqueAnswer = getUniques(answer);
             uniqueAnswer.forEach(item => {
@@ -16,17 +21,20 @@ function Test({history}) {
                 let singleTypeLength = answer.match(regexAllItem).length;
                 if(singleTypeLength >= 2) { type = type.concat(item); }
             });
-            history.push(`/result/${type}`);
+            history.push({
+                pathname: '/result',
+                state: { type: type }
+            });
         }
-    })
+    };
 
     const getUniques = array => {
         return [...new Set(array)];
-    } // 중복 제거 함수, 배열로 리턴
+    }; // 중복 제거 함수, 배열로 리턴
 
     const makeSingleType = ( index, listName ) => {
         let singleType;
-        const isFirstAnswer = ( listName === FIRST_ANSWER )
+        const isFirstAnswer = ( listName === FIRST_ANSWER );
             if( idx >= 0 && idx <= 2 ){
                 isFirstAnswer ? singleType = 'E' : singleType = 'I';
             }else if( idx <= 5 ){
@@ -37,7 +45,7 @@ function Test({history}) {
                 isFirstAnswer ? singleType = 'J' : singleType = 'P';
             }
         return singleType;
-    }; // 선택지에 따라 싱글타입을 결정해주는 함
+    }; // 선택지에 따라 싱글타입을 결정해주는 함수
 
     const onClickListHandler = e => {
         const listName = e.target.id;
@@ -47,17 +55,34 @@ function Test({history}) {
         setIdx(prevIdx => isLastIdx ? prevIdx : prevIdx + 1 );
         setAnswer(prevAnswer => prevAnswer.concat(singleType));
     };
+    const onClickPassResultHandler = () => {
+        makeType();
+    };
 
     return (
         <article className={ 'test' }>
-            <progress max={ TEST_LIST.length } value={ idx+1 } />
-            <AnswerBox
-                FIRST_ANSWER={ FIRST_ANSWER }
-                SECOND_ANSWER={ SECOND_ANSWER }
-                onClickListHandler={ onClickListHandler }
-                idx={ idx }
-                value={ TEST_LIST[idx] }
-            />
+            {
+                flag ?
+                    false
+                    :
+                    <progress max={ TEST_LIST.length } value={ idx+1 } />
+            }
+            {
+                flag ?
+                    false
+                    :
+                    <AnswerBox
+                        FIRST_ANSWER={ FIRST_ANSWER }
+                        SECOND_ANSWER={ SECOND_ANSWER }
+                        onClickListHandler={ onClickListHandler }
+                        idx={ idx }
+                        value={ TEST_LIST[idx] }
+                    />
+            }
+
+            {
+                flag ?
+                    <button onClick={onClickPassResultHandler}>결과보기</button> : false }
         </article>
     )
 }
