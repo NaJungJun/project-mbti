@@ -1,32 +1,24 @@
 import React, { useState , useEffect} from 'react';
 
 import AnswerBox from '../components/AnswerBox';
-import { FIRST_ANSWER, SECOND_ANSWER, TEST_LIST } from "../utils/plainText";
+import { FIRST_ANSWER, SECOND_ANSWER, TEST_LIST } from '../utils/plainText';
 import '../styles/Test.scss';
 
 function Test({history}) {
     const [idx, setIdx] = useState(0);
     const [answer, setAnswer] = useState('');
-    const [flag, setFlag] = useState(false);
     useEffect(() => {
-        setFlag( answer.length >= 12 );
-    },[answer.length]);
-
-    const makeType = () => {
-        if(flag){
+        if( answer.length === 12 ){
             let type='';
             const uniqueAnswer = getUniques(answer);
             uniqueAnswer.forEach(item => {
-                let regexAllItem = new RegExp(item, "g");
+                let regexAllItem = new RegExp(item, 'g');
                 let singleTypeLength = answer.match(regexAllItem).length;
                 if(singleTypeLength >= 2) { type = type.concat(item); }
             });
-            history.push({
-                pathname: '/result',
-                state: { type: type }
-            });
+            history.push({pathname : '/result', state: { type }});
         }
-    };
+    }, [ history, answer ]);
 
     const getUniques = array => {
         return [...new Set(array)];
@@ -35,17 +27,17 @@ function Test({history}) {
     const makeSingleType = ( index, listName ) => {
         let singleType;
         const isFirstAnswer = ( listName === FIRST_ANSWER );
-            if( idx >= 0 && idx <= 2 ){
-                isFirstAnswer ? singleType = 'E' : singleType = 'I';
-            }else if( idx <= 5 ){
-                isFirstAnswer ? singleType = 'S' : singleType = 'N';
-            }else if( idx <= 8 ){
-                isFirstAnswer ? singleType = 'T' : singleType = 'F';
-            }else{
-                isFirstAnswer ? singleType = 'J' : singleType = 'P';
-            }
+        if( idx >= 0 && idx <= 2 ){
+            isFirstAnswer ? singleType = 'E' : singleType = 'I';
+        }else if( idx <= 5 ){
+            isFirstAnswer ? singleType = 'S' : singleType = 'N';
+        }else if( idx <= 8 ){
+            isFirstAnswer ? singleType = 'T' : singleType = 'F';
+        }else{
+            isFirstAnswer ? singleType = 'J' : singleType = 'P';
+        }
         return singleType;
-    }; // 선택지에 따라 싱글타입을 결정해주는 함수
+    }; // 선택지에 따라 싱글타입을 결정해주는 함
 
     const onClickListHandler = e => {
         const listName = e.target.id;
@@ -53,36 +45,19 @@ function Test({history}) {
         const singleType = makeSingleType( idx, listName );
 
         setIdx(prevIdx => isLastIdx ? prevIdx : prevIdx + 1 );
-        setAnswer(prevAnswer => prevAnswer.concat(singleType));
-    };
-    const onClickPassResultHandler = () => {
-        makeType();
+        setAnswer(prevAnswer => prevAnswer.concat( singleType ));
     };
 
     return (
         <article className={ 'test' }>
-            {
-                flag ?
-                    false
-                    :
-                    <progress max={ TEST_LIST.length } value={ idx+1 } />
-            }
-            {
-                flag ?
-                    false
-                    :
-                    <AnswerBox
-                        FIRST_ANSWER={ FIRST_ANSWER }
-                        SECOND_ANSWER={ SECOND_ANSWER }
-                        onClickListHandler={ onClickListHandler }
-                        idx={ idx }
-                        value={ TEST_LIST[idx] }
-                    />
-            }
-
-            {
-                flag ?
-                    <button onClick={onClickPassResultHandler}>결과보기</button> : false }
+            <progress max={ TEST_LIST.length } value={ idx+1 } />
+            <AnswerBox
+                FIRST_ANSWER={ FIRST_ANSWER }
+                SECOND_ANSWER={ SECOND_ANSWER }
+                onClickListHandler={ onClickListHandler }
+                idx={ idx }
+                value={ TEST_LIST[idx] }
+            />
         </article>
     )
 }
