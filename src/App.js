@@ -9,14 +9,13 @@ import {
 } from './pages';
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 
-
-
 const RouteNoMatch = () => {
     return <div>404 NOT FOUND</div>
 };
 
 function App() {
-    const location = useLocation()
+    const location = useLocation();
+    // const nodeRef = React.useRef(null);
     return (
         <>
         <TransitionGroup>
@@ -25,11 +24,11 @@ function App() {
                 <Route exact path='/' component={Main} />
                 <Route path='/test' component={Test} />
                 <Route path='/makers' component={Makers}/>
-                <Route path='/result/:type' component={Result} />
+                <Route path='/result' component={Result} />
                 <Route component={RouteNoMatch} />
             </Switch>
             </CSSTransition>
-            
+
         </TransitionGroup>
             
         </>

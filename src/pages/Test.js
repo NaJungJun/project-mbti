@@ -1,7 +1,7 @@
 import React, { useState , useEffect} from 'react';
 
 import AnswerBox from '../components/AnswerBox';
-import { FIRST_ANSWER, SECOND_ANSWER, TEST_LIST } from "../utils/plainText";
+import { FIRST_ANSWER, SECOND_ANSWER, TEST_LIST } from '../utils/plainText';
 import '../styles/Test.scss';
 
 function Test({history}) {
@@ -12,30 +12,30 @@ function Test({history}) {
             let type='';
             const uniqueAnswer = getUniques(answer);
             uniqueAnswer.forEach(item => {
-                let regexAllItem = new RegExp(item, "g");
+                let regexAllItem = new RegExp(item, 'g');
                 let singleTypeLength = answer.match(regexAllItem).length;
                 if(singleTypeLength >= 2) { type = type.concat(item); }
             });
-            history.push(`/result/${type}`);
+            history.push({pathname : '/result', state: { type }});
         }
-    })
+    }, [ history, answer ]);
 
     const getUniques = array => {
         return [...new Set(array)];
-    } // 중복 제거 함수, 배열로 리턴
+    }; // 중복 제거 함수, 배열로 리턴
 
     const makeSingleType = ( index, listName ) => {
         let singleType;
-        const isFirstAnswer = ( listName === FIRST_ANSWER )
-            if( idx >= 0 && idx <= 2 ){
-                isFirstAnswer ? singleType = 'E' : singleType = 'I';
-            }else if( idx <= 5 ){
-                isFirstAnswer ? singleType = 'S' : singleType = 'N';
-            }else if( idx <= 8 ){
-                isFirstAnswer ? singleType = 'T' : singleType = 'F';
-            }else{
-                isFirstAnswer ? singleType = 'J' : singleType = 'P';
-            }
+        const isFirstAnswer = ( listName === FIRST_ANSWER );
+        if( idx >= 0 && idx <= 2 ){
+            isFirstAnswer ? singleType = 'E' : singleType = 'I';
+        }else if( idx <= 5 ){
+            isFirstAnswer ? singleType = 'S' : singleType = 'N';
+        }else if( idx <= 8 ){
+            isFirstAnswer ? singleType = 'T' : singleType = 'F';
+        }else{
+            isFirstAnswer ? singleType = 'J' : singleType = 'P';
+        }
         return singleType;
     }; // 선택지에 따라 싱글타입을 결정해주는 함
 
@@ -45,7 +45,7 @@ function Test({history}) {
         const singleType = makeSingleType( idx, listName );
 
         setIdx(prevIdx => isLastIdx ? prevIdx : prevIdx + 1 );
-        setAnswer(prevAnswer => prevAnswer.concat(singleType));
+        setAnswer(prevAnswer => prevAnswer.concat( singleType ));
     };
 
     return (
