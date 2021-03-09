@@ -7,7 +7,10 @@ import '../styles/Test.scss';
 function Test({history}) {
     const [idx, setIdx] = useState(0);
     const [answer, setAnswer] = useState('');
+    const [animation, setAnimation] = useState('fadeIn_animation')
+    const [show, setShow] = useState(false);
     useEffect(() => {
+        setShow(show => !show)
         if( answer.length === 12 ){
             let type='';
             const uniqueAnswer = getUniques(answer);
@@ -17,6 +20,9 @@ function Test({history}) {
                 if(singleTypeLength >= 2) { type = type.concat(item); }
             });
             history.push({pathname : '/result', state: { type }});
+        }
+        return () => {
+            // setAnimation('fadeOut_animation');
         }
     }, [ history, answer ]);
 
@@ -46,10 +52,12 @@ function Test({history}) {
 
         setIdx(prevIdx => isLastIdx ? prevIdx : prevIdx + 1 );
         setAnswer(prevAnswer => prevAnswer.concat( singleType ));
+        setShow(show => !show);
     };
 
     return (
-        <article className={ 'test' }>
+        show &&
+        <article className={ `test ${animation}` }>
             <progress max={ TEST_LIST.length } value={ idx+1 } />
             <AnswerBox
                 FIRST_ANSWER={ FIRST_ANSWER }
