@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
+import MainWrapper from '../common/MainWrapper';
 import Profiles from '../components/Profiles';
 import '../styles/Makers.scss'
 function Makers() {
@@ -25,23 +26,18 @@ function Makers() {
     ]
 
     return (
-        
-        <div className="makers">
-
-            <div style={{
-                padding: '1rem'
-            }}>
+            <MainWrapper>
                 <h1>만든이들</h1>
 
                 <Link to="/">
                     <button className="btn-back">돌아가기</button>
                 </Link>            
-            </div>
+            
             {makers.map(maker => (
                 <Profiles name={maker.name} image={maker.image} key={maker.id} desc={maker.desc}/>
             ))}
-        </div>
-
+        
+            </MainWrapper>
     )
     
 }

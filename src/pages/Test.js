@@ -3,6 +3,7 @@ import React, { useState , useEffect} from 'react';
 import AnswerBox from '../components/AnswerBox';
 import { FIRST_ANSWER, SECOND_ANSWER, TEST_LIST } from '../utils/plainText';
 import '../styles/Test.scss';
+import MainWrapper from '../common/MainWrapper';
 
 function Test({history}) {
     const [idx, setIdx] = useState(0);
@@ -57,6 +58,7 @@ function Test({history}) {
 
     return (
         show &&
+        <MainWrapper>
         <article className={ `test ${animation}` }>
             <progress max={ TEST_LIST.length } value={ idx+1 } />
             <AnswerBox
@@ -67,6 +69,7 @@ function Test({history}) {
                 value={ TEST_LIST[idx] }
             />
         </article>
+        </MainWrapper>
     )
 }
 

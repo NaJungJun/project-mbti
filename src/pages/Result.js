@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import Modal from '../components/Modal';
 
 import '../styles/Result.scss';
+import MainWrapper from '../common/MainWrapper';
 
 function Result({ props }) {
     const currentURL = window.location.href;
@@ -18,7 +19,7 @@ function Result({ props }) {
     }
 
     return (
-    <div className="result">
+    <MainWrapper>
         <div className="result-inner">
             <h1>당신은 <span className="breadname">{resultList[0].breadName}</span>이시군요!</h1>
             <div>
@@ -42,7 +43,9 @@ function Result({ props }) {
             }
             
         </div>
-    </div>);
+    </MainWrapper>
+    
+    );
 }
 
 export default Result;
