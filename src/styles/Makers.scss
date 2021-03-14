@@ -1,15 +1,7 @@
-.makers {
-    min-height: 812px;
-    max-width: 600px;
-    position: relative;
-    margin: 0 auto;
-    background-color: #cccccc;
-    display: flex;
-    flex-direction: column;
-    padding: 5rem;
-    text-align: center;
+
 
     .btn-back {
+   
         width: 140px;
         height: 45px;
         font-size: 11px;
@@ -23,6 +15,7 @@
         transition: all 0.3s ease 0s;
         cursor: pointer;
         outline: none;
+        margin-bottom: 2rem;
 
         &:hover {
             background-color: #2EE59D;;
@@ -34,4 +27,3 @@
 
         }
     }
-}

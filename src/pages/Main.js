@@ -23,7 +23,7 @@ function Main() {
         <MainWrapper>
             { showAlert ? <AlertBox display={display} onClick={cancelBox}/> : null}
             <h2>성격으로 알아보자!</h2>
-            <h1 className="title">OOO 심리테스트!</h1>
+            <h1 className="title">나와 비슷한 화가는?!</h1>
             <Link to="/test">
                 <button className="btn-start">시작하기</button>
             </Link>
