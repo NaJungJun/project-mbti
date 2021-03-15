@@ -1,6 +1,6 @@
 import React from 'react';
 import './Profiles.scss'
-function Profiles({ name, image, desc, position }) {
+function Profiles({ name, image, desc, position, instaLogo, instaLink }) {
 
     return (
 
@@ -18,6 +18,17 @@ function Profiles({ name, image, desc, position }) {
             
             <div className="maker-desc">
                 {desc}
+            </div>
+            <div>
+                <a href={instaLink}
+                style={{
+                    fontSize: "3rem",
+                    color: "black",
+                    textDecoration: "none"
+                
+                }}>
+                    {instaLogo}
+                </a>
             </div>
 
         </div>

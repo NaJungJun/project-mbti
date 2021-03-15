@@ -1,7 +1,12 @@
+button {
 
-
-
+   color: black;
+   text-decoration: none; 
+}
     
+@media (hover: hover) {
+    a:hover { color: red; text-decoration: underline; }
+  }
 
     .btn-start {
         width: 140px;
