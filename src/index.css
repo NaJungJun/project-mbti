@@ -5,7 +5,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #ffffff;
+  background-image: url('https://lh3.googleusercontent.com/proxy/Fl7h87AbRn6HGuX9M02Aut30n9Yff8R3iIpHKnDD4lBYZQg4d0fzeEA-4yM3S1kiJtMb6nlD5TAMqpGN3xx4yzVL83h8JRc-tVXFRIFjJZGNINPUdmq5_azZDYecArcpYnMcQzy8sjbyxOKy4uwTxFBBcgbhx-YS6BVkzK0s4_PtuIUAzJ5Iw9rhNZ6clSxBDksQnh0');
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  
+  
 }
 
 code {
