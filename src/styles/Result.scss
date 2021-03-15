@@ -90,10 +90,12 @@
     cursor: pointer;
     outline: none;
 
-    &:hover {
-      background-color: #2ee59d;
-      box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
-      color: #fff;
+    @media (hover: hover) {
+      &:hover {
+        background-color: #2ee59d;
+        box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+        color: #fff;
+      }
     }
   }
 

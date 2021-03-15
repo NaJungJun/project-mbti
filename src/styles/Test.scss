@@ -75,11 +75,13 @@
 
     transition: all 0.3s ease 0s;
 
-    &:hover {
-      background-color: $main-mint;
-      box-shadow: 0px 15px 20px $main-mint-dark;
-      color: #fff;
-      transform: translateY(-7px);
+    @media (hover: hover) {
+      &:hover {
+        background-color: $main-mint;
+        box-shadow: 0px 15px 20px $main-mint-dark;
+        color: #fff;
+        transform: translateY(-7px);
+      }
     }
   }
 }
