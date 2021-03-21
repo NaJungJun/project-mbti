@@ -1,16 +1,16 @@
-import { React, useEffect, useState } from 'react';
+import { React, useState } from 'react';
 import { Link } from 'react-router-dom';
-import resultList from '../utils/resultList';
-import PropTypes from 'prop-types';
+import RESULT_OBJ from '../utils/resultList';
 import Modal from '../components/Modal';
 
 import '../styles/Result.scss';
 import MainWrapper from '../common/MainWrapper';
 
-function Result({ props }) {
-    const currentURL = window.location.href;
+function Result({ history }) {
+    const singleType = history.location.state.type;
+    console.log(singleType)
 
-    const [modalVisible, setModalVisible] = useState(false)
+    const [modalVisible, setModalVisible] = useState(false);
     const openModal = () => {
       setModalVisible(true)
     }
@@ -21,11 +21,12 @@ function Result({ props }) {
     return (
     <MainWrapper>
         <div className="result-inner">
-            <h1>당신은 <span className="artistname">{resultList[0].artistName}</span>이시군요!</h1>
+            <h1>당신은 <span className="artistname">{RESULT_OBJ[singleType].artistName}</span>이시군요!</h1>
             <div className="desc-wrapper">
-                <img src={resultList[0].imgsrc} className="result-img" alt="artist-profile"></img>
+                <img src={RESULT_OBJ[singleType].imgsrc} className="result-img" alt="artist-profile"></img>
+                <img src={RESULT_OBJ[singleType].drwsrc} className="result-img" alt="artist-drawing"></img>
                 <p className="result-desc">
-                    {resultList[0].description.split('\n').map((line) => {
+                    {RESULT_OBJ[singleType].description.split('\n').map((line) => {
                         return <div style={{
                             marginBottom: '1rem'
                         }}>{line}</div>
@@ -35,7 +36,7 @@ function Result({ props }) {
         </div>
 
         <div className="buttons">
-            <Link to='/'>
+            <Link to='/' >
                 <button className="replay">다시하기</button>
             </Link>
             

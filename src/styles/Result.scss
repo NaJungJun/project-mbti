@@ -1,133 +1,130 @@
 @import "colors";
 
+.replay {
+  width: 140px;
+  height: 45px;
+  margin: 25px;
+  font-size: 11px;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
 
-  .replay {
-    width: 140px;
-    height: 45px;
-    margin: 25px;
-    font-size: 11px;
-    letter-spacing: 2.5px;
-    font-weight: 500;
-    color: #000;
-    background-color: #fff;
-    border: none;
-    border-radius: 45px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease 0s;
-    cursor: pointer;
-    outline: none;
-    
-    &:active {
-      background-color: #2EE59D;;
-      box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
-      color: #fff;
-      transform: translateY(-7px);
+  &:active {
+    background-color: #2ee59d;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
   }
 
+  &:hover {
+    background-color: #2ee59d;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+}
+
+.share {
+  width: 140px;
+  height: 45px;
+  margin: 25px;
+  font-size: 11px;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+
+  &:hover {
+    background-color: #2ee59d;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+}
+
+.result-inner {
+  width: 430px;
+  background-color: rgb(232, 247, 238);
+  align-items: center;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.result-img {
+  width: auto;
+  height: auto;
+  margin: 10px;
+  max-width: 300px;
+  max-height: 200px;
+}
+
+.icon-img {
+  display: inline;
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.link-copy-container {
+  display: flex;
+  margin-bottom: 20px;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.link-copy-btn {
+  width: 50px;
+  height: 40px;
+  font-size: 11px;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+
+  @media (hover: hover) {
     &:hover {
       background-color: #2ee59d;
       box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
       color: #fff;
-      transform: translateY(-7px);
     }
   }
+}
 
-  .share {
-    width: 140px;
-    height: 45px;
-    margin: 25px;
-    font-size: 11px;
-    letter-spacing: 2.5px;
-    font-weight: 500;
-    color: #000;
-    background-color: #fff;
-    border: none;
-    border-radius: 45px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease 0s;
-    cursor: pointer;
-    outline: none;
+.h1 {
+  display: block;
+}
 
-    &:hover {
-      background-color: #2ee59d;
-      box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
-      color: #fff;
-      transform: translateY(-7px);
-    }
-  }
+.artistname {
+  color: rgb(4, 194, 83);
+}
 
-  .result-inner {
-    width: 430px;
-    background-color: rgb(232, 247, 238);
-    align-items: center;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-  }
+.desc-wrapper {
+  padding: 2rem;
+  .resul-desc {
+    text-align: center;
 
-  .result-img {
-    width: auto;
-    height: auto;
-    max-width: 300px;
-    max-height: 200px;
-  }
-
-  .icon-img {
-    display: inline;
-    width: 50px;
-    height: 50px;
-    margin: 0 10px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-  }
-
-  .link-copy-container {
-    display: flex;
-    margin-bottom: 20px;
-    align-items: flex-end;
-    justify-content: center;
-  }
-
-  .link-copy-btn {
-    width: 50px;
-    height: 40px;
-    font-size: 11px;
-    letter-spacing: 2.5px;
-    font-weight: 500;
-    color: #000;
-    background-color: #fff;
-    border: none;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease 0s;
-    cursor: pointer;
-    outline: none;
-
-    @media (hover: hover) {
-      &:hover {
-        background-color: #2ee59d;
-        box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
-        color: #fff;
-      }
-    }
-  }
-
-  .h1 {
     display: block;
   }
+}
 
-  .artistname {
-    color: rgb(4, 194, 83);
-  }
-
-  .desc-wrapper {
-    padding: 2rem;
-    .resul-desc {
-      text-align: center;
-      
-      display: block;
-    }
-    
-  }
-
-  
-  .buttons {
-    align-items: center;
-  }
-
+.buttons {
+  align-items: center;
+}
