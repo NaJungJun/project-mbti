@@ -1,9 +1,9 @@
-
-import React from 'react'
-import PropTypes from 'prop-types'
-import styled from 'styled-components'
-import SnsShareButton from '../components/SnsShareButton'
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import SnsShareButton from '../components/SnsShareButton';
 import useEffect from 'react';
+//import Helmet from 'react-helmet';
 
 function Modal(
     {   className,
@@ -14,8 +14,7 @@ function Modal(
         children,
         startURL
     }) {
-
-    const currentURL = window.location.href;
+    const currentURL = 'https://mbti-artist.netlify.app/';
     const onMaskClick = (e) => {
         if (e.target === e.currentTarget) {
             onClose(e)
