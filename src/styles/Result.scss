@@ -64,8 +64,10 @@
   }
 
   .result-img {
-    width: 300px;
-    height: 200px;
+    width: auto;
+    height: auto;
+    max-width: 300px;
+    max-height: 200px;
   }
 
   .icon-img {
@@ -110,15 +112,21 @@
     display: block;
   }
 
-  .breadname {
+  .artistname {
     color: rgb(4, 194, 83);
   }
 
-  .resul-desc {
-    text-align: center;
-    display: block;
+  .desc-wrapper {
+    padding: 2rem;
+    .resul-desc {
+      text-align: center;
+      
+      display: block;
+    }
+    
   }
 
+  
   .buttons {
     align-items: center;
   }

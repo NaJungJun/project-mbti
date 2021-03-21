@@ -21,10 +21,16 @@ function Result({ props }) {
     return (
     <MainWrapper>
         <div className="result-inner">
-            <h1>당신은 <span className="breadname">{resultList[0].breadName}</span>이시군요!</h1>
-            <div>
-                <img src={resultList[0].imgsrc} className="result-img"></img>
-                <p className="result-desc">{resultList[0].description}</p>
+            <h1>당신은 <span className="artistname">{resultList[0].artistName}</span>이시군요!</h1>
+            <div className="desc-wrapper">
+                <img src={resultList[0].imgsrc} className="result-img" alt="artist-profile"></img>
+                <p className="result-desc">
+                    {resultList[0].description.split('\n').map((line) => {
+                        return <div style={{
+                            marginBottom: '1rem'
+                        }}>{line}</div>
+                    })}
+                    </p>
             </div>
         </div>
 
