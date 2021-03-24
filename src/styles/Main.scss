@@ -23,8 +23,8 @@
             transform: translateY(-7px);
         }
 
-        @media (hover: hover) {
-            &:hover {
+        @media only screen and (max-width: 480px) {
+            &:active {
                 background-color: #2EE59D;;
                 box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
                 color: #fff;
