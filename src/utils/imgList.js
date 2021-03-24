@@ -32,6 +32,8 @@ import georgia_drawing from '../images/georgia_drawing.png';
 import norman_drawing from '../images/norman_drawing.png';
 import hopper_drawing from '../images/hopper_drawing.png';
 
+import easel from '../images/easel.png'
+
 const DRAWING_LIST = {
     dali: dali_drawing,
     leo: leo_drawing,
@@ -69,5 +71,9 @@ const ARTIST_LIST = {
     norman: norman_picture,
     hopper: hopper_picture
 };
+
+const BACKGROUND = {
+    easel: easel
+}
 
 export {ARTIST_LIST, DRAWING_LIST};

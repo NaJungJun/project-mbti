@@ -69,12 +69,11 @@
 
     @media only screen and (max-width: 480px) {
       width: 100%;
-      &:active {
+     
         background-color: $main-mint;
         box-shadow: 0px 15px 20px $main-mint-dark;
         color: #fff;
-        transform: translateY(-7px);
-      }
+     
     
     }
 
@@ -96,6 +95,8 @@
     background-color: #fff;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 
+    @media only screen and (min-width: 480px){
+
     transition: all 0.3s ease 0s;
 
    
@@ -105,7 +106,7 @@
       color: #fff;
       transform: translateY(-7px);
     }
-
+  }
    
   }
 }

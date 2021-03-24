@@ -7,13 +7,9 @@ import '../styles/Result.scss';
 import MainWrapper from '../common/MainWrapper';
 
 function Result({ location }) {
-<<<<<<< HEAD
-    const singleType = location.state.type;
-=======
     //console.log("history : "+history)
     const singleType = location.state.type;
     const resultObj = RESULT_OBJ[singleType];
->>>>>>> 80b1235e12244ea29fabc69a690a85e44d306f57
     console.log(singleType)
 
     const [modalVisible, setModalVisible] = useState(false);
