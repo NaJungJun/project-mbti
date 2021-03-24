@@ -58,7 +58,7 @@ function Test({history}) {
 
     return (
         show &&
-        <MainWrapper>
+        <MainWrapper className="main-wrapper">
         <article className={ `test ${animation}` }>
             <progress max={ TEST_LIST.length } value={ idx+1 } />
             <AnswerBox

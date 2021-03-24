@@ -6,8 +6,8 @@ import Modal from '../components/Modal';
 import '../styles/Result.scss';
 import MainWrapper from '../common/MainWrapper';
 
-function Result({ history }) {
-    const singleType = history.location.state.type;
+function Result({ location }) {
+    const singleType = location.state.type;
     console.log(singleType)
 
     const [modalVisible, setModalVisible] = useState(false);
@@ -19,7 +19,7 @@ function Result({ history }) {
     }
 
     return (
-    <MainWrapper>
+    <MainWrapper className="main-wrapper">
         <div className="result-inner">
             <h1>당신은 <span className="artistname">{RESULT_OBJ[singleType].artistName}</span>이시군요!</h1>
             <div className="desc-wrapper">

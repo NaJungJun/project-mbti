@@ -33,7 +33,7 @@ function Makers() {
     ]
 
     return (
-            <MainWrapper>
+            <MainWrapper className="main-wrapper">
                 <h1>만든이들</h1>
 
                 <Link to="/">
