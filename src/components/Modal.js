@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import SnsShareButton from '../components/SnsShareButton';
+// import SnsShareButton from '../components/SnsShareButton';
 import useEffect from 'react';
+import KakaoShareBtn from './KakaoShareBtn';
 //import Helmet from 'react-helmet';
 
 function Modal(
@@ -12,6 +13,8 @@ function Modal(
         closable,
         visible,
         children,
+        imgSrc,
+        artistName,
         startURL
     }) {
     const currentURL = 'https://mbti-artist.netlify.app/';
@@ -50,7 +53,8 @@ function Modal(
                         <textarea id="url-textarea" className="url-textarea" type="text" value={currentURL} />
                         <button className="link-copy-btn" type="button" onClick={copyToClipboard}>copy</button>
                     </div>
-                    <SnsShareButton name="twitter" />
+                    {/*<SnsShareButton name="twitter" />*/}
+                    <KakaoShareBtn imgSrc={imgSrc} artistName={artistName}/>
                 </ModalInner>
             </ModalWrapper>
         </>
