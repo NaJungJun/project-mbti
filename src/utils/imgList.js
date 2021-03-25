@@ -32,9 +32,12 @@ import georgia_drawing from '../images/georgia_drawing.png';
 import norman_drawing from '../images/norman_drawing.png';
 import hopper_drawing from '../images/hopper_drawing.png';
 
+
 import kakao from '../images/kakaotalkicon.png'
 import twitter from '../images/twittericon.png'
 import facebook from '../images/facebookicon.png'
+import easel from '../images/easel.png'
+
 
 const DRAWING_LIST = {
     dali: dali_drawing,
@@ -80,4 +83,9 @@ const ICON_LIST = {
     twitter: twitter
 };
 
-export { ARTIST_LIST, DRAWING_LIST, ICON_LIST };
+const BACKGROUND = {
+    easel: easel
+}
+
+export { ARTIST_LIST, DRAWING_LIST, ICON_LIST, BACKGROUND };
+
