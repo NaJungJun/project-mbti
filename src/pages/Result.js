@@ -45,9 +45,13 @@ function Result({ location }) {
             {
             modalVisible && <Modal
                 visible={modalVisible}
+                imgSrc={resultObj.imgsrc}
+                artistName={resultObj.artistName}
                 closable={true}
                 maskClosable={true}
-                onClose={closeModal}><h3>공유하기</h3></Modal>
+                onClose={closeModal}>
+                <h3>공유하기</h3>
+            </Modal>
             }
             
         </div>
