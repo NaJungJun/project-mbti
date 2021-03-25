@@ -32,6 +32,10 @@ import georgia_drawing from '../images/georgia_drawing.png';
 import norman_drawing from '../images/norman_drawing.png';
 import hopper_drawing from '../images/hopper_drawing.png';
 
+import kakao from '../images/kakaotalkicon.png'
+import twitter from '../images/twittericon.png'
+import facebook from '../images/facebookicon.png'
+
 const DRAWING_LIST = {
     dali: dali_drawing,
     leo: leo_drawing,
@@ -70,4 +74,10 @@ const ARTIST_LIST = {
     hopper: hopper_picture
 };
 
-export {ARTIST_LIST, DRAWING_LIST};
+const ICON_LIST = {
+    kakao: kakao,
+    facebook: facebook,
+    twitter: twitter
+};
+
+export { ARTIST_LIST, DRAWING_LIST, ICON_LIST };

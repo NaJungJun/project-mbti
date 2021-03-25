@@ -51,6 +51,8 @@ function Modal(
                         <button className="link-copy-btn" type="button" onClick={copyToClipboard}>copy</button>
                     </div>
                     <SnsShareButton name="twitter" />
+                    <SnsShareButton name="kakao" />
+                    <SnsShareButton name="facebook" />
                 </ModalInner>
             </ModalWrapper>
         </>

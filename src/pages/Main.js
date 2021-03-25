@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'
-import '../styles/Main.scss'
-import { CopyToClipboard } from 'react-copy-to-clipboard'
+import { Link } from 'react-router-dom';
+import '../styles/Main.scss';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 import AlertBox from '../components/AlertBox';
 import MainWrapper from '../common/MainWrapper';
-import char from '../images/char.png'
+import char from '../images/char.png';
 function Main() {
 
     const [showAlert, setShowAlert] = useState(false)
@@ -18,7 +18,7 @@ function Main() {
     const cancelBox = () => {
         setShowAlert(false)        
     }
-    
+
     return (
 
         <MainWrapper>
