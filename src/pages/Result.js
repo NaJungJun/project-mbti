@@ -11,7 +11,6 @@ function Result({ location }) {
     //console.log("history : "+history)
     const singleType = location.state.type;
     const resultObj = RESULT_OBJ[singleType];
-    console.log(singleType)
 
     const [modalVisible, setModalVisible] = useState(false);
     const openModal = () => {
