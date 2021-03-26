@@ -1,11 +1,7 @@
 @import "colors";
 
-
 .main-wrapper {
- 
-
   @media only screen and (min-width: 480px) {
-
     .replay {
       &:hover {
         background-color: #2ee59d;
@@ -22,39 +18,35 @@
       background-color: #fff;
       border: none;
       box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-      
+
       cursor: pointer;
       outline: none;
     }
-  .share {
-   
-    width: 140px;
-    height: 45px;
-    margin: 25px;
-    font-size: 11px;
-    letter-spacing: 2.5px;
-    font-weight: 500;
-    color: #000;
-    background-color: #fff;
-    border: none;
-    border-radius: 45px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease 0s;
-    cursor: pointer;
-    outline: none;
-  
-    &:hover {
-      background-color: #2ee59d;
-      box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
-      color: #fff;
-      transform: translateY(-7px);
+    .share {
+      width: 140px;
+      height: 45px;
+      margin: 25px;
+      font-size: 11px;
+      letter-spacing: 2.5px;
+      font-weight: 500;
+      color: #000;
+      background-color: #fff;
+      border: none;
+      border-radius: 45px;
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease 0s;
+      cursor: pointer;
+      outline: none;
+
+      &:hover {
+        background-color: #2ee59d;
+        box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+        color: #fff;
+        transform: translateY(-7px);
+      }
     }
-
   }
 
-  
-  }
-  
   .result-inner {
     @media only screen and (max-width: 480px) {
       h1 {
@@ -62,23 +54,20 @@
       }
       margin-bottom: 2rem;
     }
-    
+
     width: 430px;
     background-color: rgb(232, 247, 238);
     align-items: center;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    
-    @media only screen and (min-width: 480px) {
-    h1 {
-      padding-left: 2rem;
-      padding-right: 2rem;
 
+    @media only screen and (min-width: 480px) {
+      h1 {
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
     }
-    
-    
   }
-  }
-  
+
   .result-img {
     width: 150px;
     height: 250px;
@@ -86,7 +75,7 @@
     max-width: 300px;
     max-height: 200px;
   }
-  
+
   .icon-img {
     display: inline;
     width: 50px;
@@ -94,63 +83,66 @@
     margin: 0 10px;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   }
-  
+
   .link-copy-container {
     display: flex;
     margin-bottom: 20px;
     align-items: flex-end;
     justify-content: center;
   }
-  
-  
-    @media only screen and (max-width: 480px) {
-      .replay {
-        
-        background-color: #2ee59d;
-        box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
-        color: #fff;
-        width: 140px;
-        height: 45px;
-        font-size: 11px;
-        letter-spacing: 2.5px;
-        font-weight: 500;
-      }
+  .url-textarea {
+    display: inline-block;
+    width: 130px;
+    height: 95px;
+  }
+  .link-copy-btn {
+    display: inline-block;
+    width: 50px;
+    border-radius: 0px;
+  }
+  @media only screen and (max-width: 480px) {
+    .replay {
+      background-color: #2ee59d;
+      box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+      color: #fff;
+      width: 140px;
+      height: 45px;
+      font-size: 11px;
+      letter-spacing: 2.5px;
+      font-weight: 500;
+    }
 
-      .share {
-        background-color: #2ee59d;
-        box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
-        color: #fff;
-        width: 140px;
-        height: 45px;
-        font-size: 11px;
-        letter-spacing: 2.5px;
-        font-weight: 500;
-        margin-left: 2rem;
-      }
-      
-      
+    .share {
+      background-color: #2ee59d;
+      box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+      color: #fff;
+      width: 140px;
+      height: 45px;
+      font-size: 11px;
+      letter-spacing: 2.5px;
+      font-weight: 500;
+      margin-left: 2rem;
     }
   }
-  
-  .h1 {
+}
+
+.h1 {
+  display: block;
+}
+
+.artistname {
+  color: rgb(4, 194, 83);
+}
+
+.desc-wrapper {
+  padding: 2rem;
+  .resul-desc {
+    text-align: center;
+
     display: block;
   }
-  
-  .artistname {
-    color: rgb(4, 194, 83);
-  }
-  
-  .desc-wrapper {
-    padding: 2rem;
-    .resul-desc {
-      text-align: center;
-  
-      display: block;
-    }
-  }
-  
-  .buttons {
-    align-items: center;
-  }
+}
 
-  
+.buttons {
+  align-items: center;
+}
