@@ -1,10 +1,11 @@
-import { React, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import RESULT_OBJ from '../utils/resultList';
 import Modal from '../components/Modal';
 
 import '../styles/Result.scss';
 import MainWrapper from '../common/MainWrapper';
+import Loading from '../components/Loading';
 
 function Result({ location }) {
     //console.log("history : "+history)
@@ -20,6 +21,15 @@ function Result({ location }) {
       setModalVisible(false)
     };
 
+    const [loading, setLoading] = useState(true);
+    useEffect(() => {
+        const makeLoadingTime = setTimeout(() => setLoading(false), 2000);
+        return () => {
+            clearTimeout(makeLoadingTime);
+        };
+    }, []);
+    
+    if (loading) return <MainWrapper><Loading /></MainWrapper>
     return (
     <MainWrapper className="main-wrapper">
         <div className="result-inner">
