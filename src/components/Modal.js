@@ -2,9 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import SnsShareButton from '../components/SnsShareButton';
-import useEffect from 'react';
-import KakaoShareBtn from './KakaoShareBtn';
-//import Helmet from 'react-helmet';
 
 function Modal(
     {   className,
@@ -54,7 +51,7 @@ function Modal(
                         <button className="link-copy-btn" type="button" onClick={copyToClipboard}>copy</button>
                     </div>
                     <SnsShareButton name="twitter" />
-                    <KakaoShareBtn imgSrc={imgSrc} artistName={artistName}/>
+                    <SnsShareButton name="kakao" imgSrc={imgSrc} artistName={artistName}/>
                     <SnsShareButton name="facebook" />
                 </ModalInner>
             </ModalWrapper>
