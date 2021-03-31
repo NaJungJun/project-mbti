@@ -28,8 +28,10 @@ function Main() {
             { showAlert ? <AlertBox display={display} onClick={cancelBox}/> : null}
            
             <h2>성격으로 알아보자!</h2>
-            <h1 className="title">{<Typed strings={['나와 비슷한 화가는!?']} typeSpeed={40} backSpeed={50} loop/>}</h1>
-
+            
+            
+            <Typed strings={['나와 비슷한 화가는!?']} typeSpeed={40} backSpeed={50} loop/>
+            
 
             <img src={char} alt="char"/>
 
