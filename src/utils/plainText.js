@@ -1,5 +1,10 @@
 const FIRST_ANSWER = 'firstAnswer';
 const SECOND_ANSWER = 'secondAnswer';
+const SNS_NAME = {
+    KAKAO: 'kakao',
+    FACEBOOK: 'facebook',
+    TWITTER: 'twitter',
+}
 
 const TEST_LIST = [
     ['처음 보는 친구들에게 나는?', '내가 먼저 말을 건낸다.', '대부분 다른 친구가 먼저 말을 건낸다.'],
@@ -16,4 +21,4 @@ const TEST_LIST = [
     ['12번째 질문', '12번째 질문에 대한 첫번째 답', '12번째 질문에 대한 두번째 답']
 ];
 
-export { FIRST_ANSWER, SECOND_ANSWER, TEST_LIST };
+export { FIRST_ANSWER, SECOND_ANSWER, TEST_LIST, SNS_NAME };

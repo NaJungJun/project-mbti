@@ -2,8 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import SnsShareButton from '../components/SnsShareButton';
-import useEffect from 'react';
-//import Helmet from 'react-helmet';
 
 function Modal(
     {   className,
@@ -12,6 +10,8 @@ function Modal(
         closable,
         visible,
         children,
+        imgSrc,
+        artistName,
         startURL
     }) {
     const currentURL = 'https://mbti-artist.netlify.app/';
@@ -51,6 +51,8 @@ function Modal(
                         <button className="link-copy-btn" type="button" onClick={copyToClipboard}>copy</button>
                     </div>
                     <SnsShareButton name="twitter" />
+                    <SnsShareButton name="kakao" imgSrc={imgSrc} artistName={artistName}/>
+                    <SnsShareButton name="facebook" />
                 </ModalInner>
             </ModalWrapper>
         </>

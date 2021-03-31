@@ -1,16 +1,16 @@
-import { React, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import RESULT_OBJ from '../utils/resultList';
 import Modal from '../components/Modal';
 
 import '../styles/Result.scss';
 import MainWrapper from '../common/MainWrapper';
+import Loading from '../components/Loading';
 
 function Result({ location }) {
     //console.log("history : "+history)
     const singleType = location.state.type;
     const resultObj = RESULT_OBJ[singleType];
-    console.log(singleType)
 
     const [modalVisible, setModalVisible] = useState(false);
     const openModal = () => {
@@ -20,6 +20,15 @@ function Result({ location }) {
       setModalVisible(false)
     };
 
+    const [loading, setLoading] = useState(true);
+    useEffect(() => {
+        const makeLoadingTime = setTimeout(() => setLoading(false), 2000);
+        return () => {
+            clearTimeout(makeLoadingTime);
+        };
+    }, []);
+    
+    if (loading) return <MainWrapper><Loading /></MainWrapper>
     return (
     <MainWrapper className="main-wrapper">
         <div className="result-inner">
@@ -45,9 +54,13 @@ function Result({ location }) {
             {
             modalVisible && <Modal
                 visible={modalVisible}
+                imgSrc={resultObj.imgsrc}
+                artistName={resultObj.artistName}
                 closable={true}
                 maskClosable={true}
-                onClose={closeModal}><h3>공유하기</h3></Modal>
+                onClose={closeModal}>
+                <h3>공유하기</h3>
+            </Modal>
             }
             
         </div>
