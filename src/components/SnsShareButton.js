@@ -6,9 +6,12 @@ function SnsShareButton ( { name, imgSrc, artistName } ) {
     const { KAKAO, TWITTER, FACEBOOK } = SNS_NAME;
     const {REACT_APP_KAKAO_KEY, OUR_SITE_URL} = process.env;
     const myUrl = encodeURIComponent('https://mbti-artist.netlify.app');
-    const TWITTER_BASE_URL = 'https://twitter.com/intent/tweet?text=[TEXT]&url=';
+    const name = props.name;
+    const className = name+'-share-btn';
+    const popOption = 'width=300,height=300;';
+    const TWITTER_BASE_URL = 'https://twitter.com/intent/tweet?text=나와 닮은 화가가 궁금하다면?&url=';
     const FACEBOOK_BASE_URL = 'http://www.facebook.com/sharer/sharer.php?u=';
-
+    let snsUrl;
 
     const sendKakaoLink = () => {
         window.Kakao && !window.Kakao.isInitialized() && window.Kakao.init(REACT_APP_KAKAO_KEY);
@@ -50,8 +53,7 @@ function SnsShareButton ( { name, imgSrc, artistName } ) {
 
     const onClick = () => {
         // facebook, twitter 공유하기 기능
-
-        window.open(setSnsUrl(), '_blank');
+        window.open(setSnsUrl(), popOption);
     };
 
     useEffect(()=>{
@@ -60,7 +62,7 @@ function SnsShareButton ( { name, imgSrc, artistName } ) {
     
     return (
            <button className='sns-share-btn' onClick={ (name === KAKAO) ? sendKakaoLink : onClick }>
-               <img src={ ICON_LIST[name] } className="icon-img" alt={ `${name} share button` } />
+               <img src={ ICON_LIST[name] } className={className} alt={ `${name} share button` } />
            </button>
     );
 }
