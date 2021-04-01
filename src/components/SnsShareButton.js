@@ -6,16 +6,17 @@ function SnsShareButton ( { props } ) {
     const name = props.name;
     const className = name+'-share-btn';
     let snsUrl;
+    const popOption = 'width=300,height=300;';
 
     const setSnsUrl = () => {
-        if (name==='twitter') { snsUrl = 'https://twitter.com/intent/tweet?text=[TEXT]&url=' + myUrl; }
+        if (name==='twitter') { snsUrl = 'https://www.twitter.com/intent/tweet?text=나와 닮은 화가가 궁금하다면?&url=' + myUrl; } 
         else if (name==='facebook') { snsUrl = 'http://www.facebook.com/sharer/sharer.php?u=' + myUrl; }
     }
 
     const onClick = () => {
         setSnsUrl();
-        console.log(snsUrl)
-        window.open(snsUrl);
+
+        window.open(snsUrl, popOption);
     }
     
     return(

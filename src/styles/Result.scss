@@ -90,16 +90,19 @@
     align-items: flex-end;
     justify-content: center;
   }
+
   .url-textarea {
     display: inline-block;
     width: 130px;
     height: 95px;
   }
+
   .link-copy-btn {
     display: inline-block;
     width: 50px;
     border-radius: 0px;
   }
+
   @media only screen and (max-width: 480px) {
     .replay {
       background-color: #2ee59d;
