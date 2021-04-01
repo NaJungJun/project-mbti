@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import '../styles/Main.scss';
-import { CopyToClipboard } from 'react-copy-to-clipboard';
+import { Link } from 'react-router-dom'
+import '../styles/Main.scss'
+import { CopyToClipboard } from 'react-copy-to-clipboard'
 import AlertBox from '../components/AlertBox';
 import MainWrapper from '../common/MainWrapper';
-import char from '../images/char.png';
+import char from '../images/char.png'
+import Typed from 'react-typed'
+
 function Main() {
 
     const [showAlert, setShowAlert] = useState(false)
@@ -18,13 +20,18 @@ function Main() {
     const cancelBox = () => {
         setShowAlert(false)        
     }
-
+    
     return (
+  
 
         <MainWrapper className="main-wrapper">
             { showAlert ? <AlertBox display={display} onClick={cancelBox}/> : null}
+           
             <h2>성격으로 알아보자!</h2>
-            <h1 className="title">나와 비슷한 화가는?!</h1>
+            
+            
+            <Typed strings={['나와 비슷한 화가는!?']} typeSpeed={40} backSpeed={50} loop/>
+            
 
             <img src={char} alt="char"/>
 

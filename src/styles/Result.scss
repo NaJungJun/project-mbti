@@ -149,3 +149,13 @@
 .buttons {
   align-items: center;
 }
+.sns-share-btn {
+  box-shadow:none;
+  background: none;
+  width: fit-content;
+
+  &:hover{
+    box-shadow:none;
+    background: none;
+  }
+}
