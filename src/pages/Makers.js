@@ -27,7 +27,7 @@ function Makers() {
         },
         {
             id: 3,
-            name: '이정현(INTJ)',
+            name: '이정현(ESTJ)',
             image: jh,
             desc: '',
             position: '개발자'

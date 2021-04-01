@@ -1,7 +1,6 @@
 
 
-
-
+   
     .profiles-wrapper {
         border-radius: 16px;
         background-color: #fff;
@@ -11,6 +10,12 @@
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         justify-content: center;
         align-items: center;
+
+        @media only screen and (max-width: 480px) {
+            width: 100%;
+            
+        }
+        
 
 
       .profiles-detail{
