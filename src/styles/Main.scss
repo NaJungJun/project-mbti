@@ -1,76 +1,52 @@
 .main-wrapper {
-   
-    @media (max-width: 480px) {
-        width: 100%;
-        height: 100%;
-   
-            button {
-                border: none;
-                border-radius: 45px;
-                cursor: pointer;
-                outline: none;
-                margin-bottom: 2rem;
-                font-size: 11px;
-                letter-spacing: 2.5px;
-                font-weight: 500;
-                background-color: #2ee59d;
-                box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
-                color: #fff;
-    
-      
-        }
-       
-    }
+  @media (max-width: 480px) {
+    width: 100%;
+    height: 100%;
 
-    span {
-        font-size: 2rem;
-        display: inline;
-    
+    button {
+      border: none;
+      border-radius: 45px;
+      cursor: pointer;
+      outline: none;
+      margin-bottom: 2rem;
+      font-size: 11px;
+      letter-spacing: 2.5px;
+      font-weight: 500;
+      background-color: #2ee59d;
+      box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+      color: #fff;
     }
-    .typed-cursor {
-        color: #2ee59d;
-    }
+  }
+
+  span {
+    font-size: 2rem;
+    display: inline;
+  }
+  .typed-cursor {
+    color: #2ee59d;
+  }
 }
-    // button {
-    //     width: 140px;
-    //     height: 45px;
-    //     font-size: 11px;
-    //     letter-spacing: 2.5px;
-    //     font-weight: 500;
-    //     color: #000;
-    //     background-color: #fff;
-    //     border: none;
-    //     border-radius: 45px;
-    //     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    //     transition: all 0.3s ease 0s;
-    //     cursor: pointer;
-    //     outline: none;
-    //     margin-bottom: 2rem;
+// button {
+//     width: 140px;
+//     height: 45px;
+//     font-size: 11px;
+//     letter-spacing: 2.5px;
+//     font-weight: 500;
+//     color: #000;
+//     background-color: #fff;
+//     border: none;
+//     border-radius: 45px;
+//     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+//     transition: all 0.3s ease 0s;
+//     cursor: pointer;
+//     outline: none;
+//     margin-bottom: 2rem;
 
-        // &:hover {
-        //     background-color: #2ee59d;
-        //     box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
-        //     color: #fff;
-        //     transform: translateY(-7px);
-        //   }
+// &:hover {
+//     background-color: #2ee59d;
+//     box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+//     color: #fff;
+//     transform: translateY(-7px);
+//   }
 
-       
-
-    
-    // }
-
-
-
-    
- 
-
-    
-    
-
-   
-    
-
-    
-        
-
-
+// }

@@ -141,7 +141,6 @@
   padding: 2rem;
   .resul-desc {
     text-align: center;
-
     display: block;
   }
 }
@@ -149,13 +148,14 @@
 .buttons {
   align-items: center;
 }
+
 .sns-share-btn {
-  box-shadow:none;
+  box-shadow: none;
   background: none;
   width: fit-content;
 
-  &:hover{
-    box-shadow:none;
+  &:hover {
+    box-shadow: none;
     background: none;
   }
 }
