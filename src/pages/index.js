@@ -5,4 +5,5 @@
     export { default as Test } from './Test'
     export { default as Result } from './Result'
     export { default as Makers } from './Makers'
+    export { default as RouteNoMatch } from './RouteNoMatch'
     

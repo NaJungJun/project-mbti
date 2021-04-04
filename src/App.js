@@ -5,13 +5,12 @@ import {
     Main,
     Test,
     Result,
-    Makers
+    Makers,
+    RouteNoMatch
 } from './pages';
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 
-const RouteNoMatch = () => {
-    return <div>404 NOT FOUND</div>
-};
+
 
 function App() {
     const location = useLocation();
@@ -28,6 +27,8 @@ function App() {
                 <Route component={RouteNoMatch} />
             </Switch>
             </CSSTransition>
+
+          
 
         </TransitionGroup>
             
