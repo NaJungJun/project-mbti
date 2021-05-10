@@ -6,6 +6,9 @@
   transform: translateY(-7px);
 }
 @mixin btn_standard {
+  @media only screen and (max-width: 480px) {
+    background: #d4f5e8;
+  }
   /* btn size */
   width: 140px;
   height: 45px;
@@ -31,8 +34,5 @@
     &:hover {
       @include btn_effect;
     }
-  }
-  &:active{
-    @include btn_effect;
   }
 }
