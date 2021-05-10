@@ -30,7 +30,7 @@ function Result({ location }) {
     
     if (loading) return <MainWrapper><Loading /></MainWrapper>
     return (
-    <MainWrapper className="main-wrapper">
+    <MainWrapper>
         <div className="result-inner">
             <h1>당신은 <span className="artistname">{resultObj.artistName}</span>이시군요!</h1>
             <div className="desc-wrapper">
@@ -38,9 +38,7 @@ function Result({ location }) {
                 <img src={resultObj.drwsrc} className="result-img" alt="artist-drawing"></img>
                 <p className="result-desc">
                     {resultObj.description.split('\n').map((line) => {
-                        return <div style={{
-                            marginBottom: '1rem'
-                        }}>{line}</div>
+                        return <div>{line}</div>
                     })}
                 </p>
             </div>

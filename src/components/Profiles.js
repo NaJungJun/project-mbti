@@ -9,10 +9,10 @@ function Profiles({ name, image, desc, position, instaLogo, instaLink }) {
 
             <div className="profiles-detail">
                 <img src={image} alt="profile" className="pictures"/>
-            
-                <span className="maker-name">{name}</span>
-
+            <div className="div_maker_container">
                 <span className="maker-position">{position}</span>
+                <span className="maker-name">{name}</span>
+            </div>
             </div>
                 
             

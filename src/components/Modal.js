@@ -47,7 +47,7 @@ function Modal(
                 <ModalInner tabIndex="0" className="modal-inner">
                     {children}
                     <div className="link-copy-container">
-                        <textarea id="url-textarea" className="url-textarea" type="text" value={currentURL} />
+                        <textarea id="url-textarea" className="url-textarea" value={currentURL} />
                         <button className="link-copy-btn" type="button" onClick={copyToClipboard}>copy</button>
                     </div>
                     <SnsShareButton name="twitter" />
@@ -105,7 +105,10 @@ const ModalInner = styled.div`
   top: 50%;
   transform: translateY(-50%);
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 30px 20px;
+  h3 {
+    margin-top: 0;
+  }
 `
 
 export default Modal;

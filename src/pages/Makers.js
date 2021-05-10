@@ -22,7 +22,7 @@ function Makers() {
             id: 2,
             name: '박나리(INTP)',
             image: nr,
-            desc: '',
+            desc: ':P',
             position: '개발자'
         },
         {
@@ -36,7 +36,7 @@ function Makers() {
     ]
 
     return (
-            <MainWrapper className="main-wrapper">
+            <MainWrapper>
                 <h1>만든이들</h1>
 
                 <Link to="/">
