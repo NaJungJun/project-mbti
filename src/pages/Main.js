@@ -24,7 +24,7 @@ function Main() {
     return (
   
 
-        <MainWrapper className="main-wrapper">
+        <MainWrapper>
             { showAlert ? <AlertBox display={display} onClick={cancelBox}/> : null}
            
             <h2>성격으로 알아보자!</h2>

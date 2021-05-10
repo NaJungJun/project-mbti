@@ -5,10 +5,10 @@ const AnswerBox = ({ FIRST_ANSWER, SECOND_ANSWER, idx, value, onClickListHandler
         <>
             <span>Q{idx+1}. {value[0]}</span>
             <section>
-                <button id={FIRST_ANSWER} onClick={ e => onClickListHandler(e) }>
+                <button id={FIRST_ANSWER} onClick={ e => onClickListHandler(e) } className={'btn_test'}>
                     {value[1]}
                 </button>
-                <button id={SECOND_ANSWER} onClick={ e => onClickListHandler(e) }>
+                <button id={SECOND_ANSWER} onClick={ e => onClickListHandler(e) } className={'btn_test'}>
                     {value[2]}
                 </button>
             </section>

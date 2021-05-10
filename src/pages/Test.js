@@ -58,17 +58,17 @@ function Test({history}) {
 
     return (
         show &&
-        <MainWrapper className="main-wrapper">
-        <article className={ `test ${animation}` }>
-            <progress max={ TEST_LIST.length } value={ idx+1 } />
-            <AnswerBox
-                FIRST_ANSWER={ FIRST_ANSWER }
-                SECOND_ANSWER={ SECOND_ANSWER }
-                onClickListHandler={ onClickListHandler }
-                idx={ idx }
-                value={ TEST_LIST[idx] }
-            />
-        </article>
+        <MainWrapper>
+            <article className={ `test ${animation}` }>
+                <progress max={ TEST_LIST.length } value={ idx+1 } />
+                <AnswerBox
+                    FIRST_ANSWER={ FIRST_ANSWER }
+                    SECOND_ANSWER={ SECOND_ANSWER }
+                    onClickListHandler={ onClickListHandler }
+                    idx={ idx }
+                    value={ TEST_LIST[idx] }
+                />
+            </article>
         </MainWrapper>
     )
 }

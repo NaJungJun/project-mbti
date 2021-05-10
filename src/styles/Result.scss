@@ -1,64 +1,36 @@
-@import "colors";
-
+@import '../common/Button';
 .main-wrapper {
-  @media only screen and (min-width: 480px) {
-    .replay {
-      &:hover {
-        background-color: #2ee59d;
-        box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
-        color: #fff;
-        transform: translateY(-7px);
-      }
-      width: 140px;
-      height: 45px;
-      font-size: 11px;
-      letter-spacing: 2.5px;
-      font-weight: 500;
-      color: #000;
-      background-color: #fff;
-      border: none;
-      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-
-      cursor: pointer;
-      outline: none;
+  .replay {
+    @media only screen and (max-width: 480px) {
+      width: 120px;
+      margin-right: 1rem;
     }
-    .share {
-      width: 140px;
-      height: 45px;
-      margin: 25px;
-      font-size: 11px;
-      letter-spacing: 2.5px;
-      font-weight: 500;
-      color: #000;
-      background-color: #fff;
-      border: none;
-      border-radius: 45px;
-      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-      transition: all 0.3s ease 0s;
-      cursor: pointer;
-      outline: none;
-
-      &:hover {
-        background-color: #2ee59d;
-        box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
-        color: #fff;
-        transform: translateY(-7px);
-      }
+    margin-bottom: 0;
+    margin-right: 2rem;
+  }
+  .share {
+    @media only screen and (max-width: 480px) {
+      width: 120px;
     }
+    margin-bottom: 0;
   }
 
   .result-inner {
     @media only screen and (max-width: 480px) {
       h1 {
+        font-size: 1.2em;
         padding: 1rem 2rem;
       }
+      padding: 1em 1.5em;
       margin-bottom: 2rem;
     }
 
-    width: 430px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 2em 2.5em;
     background-color: rgb(232, 247, 238);
     align-items: center;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 
     @media only screen and (min-width: 480px) {
       h1 {
@@ -76,56 +48,40 @@
     max-height: 200px;
   }
 
+  .result-desc {
+    div + div {
+      margin-top: 1rem;
+    }
+  }
+
   .icon-img {
     display: inline;
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     margin: 0 10px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
   }
 
   .link-copy-container {
     display: flex;
     margin-bottom: 20px;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
   }
 
   .url-textarea {
+    resize: none;
     display: inline-block;
     width: 130px;
-    height: 95px;
+    height: 45px;
+    margin-right: 1em;
   }
 
   .link-copy-btn {
     display: inline-block;
     width: 50px;
-    border-radius: 0px;
-  }
-
-  @media only screen and (max-width: 480px) {
-    .replay {
-      background-color: #2ee59d;
-      box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
-      color: #fff;
-      width: 140px;
-      height: 45px;
-      font-size: 11px;
-      letter-spacing: 2.5px;
-      font-weight: 500;
-    }
-
-    .share {
-      background-color: #2ee59d;
-      box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
-      color: #fff;
-      width: 140px;
-      height: 45px;
-      font-size: 11px;
-      letter-spacing: 2.5px;
-      font-weight: 500;
-      margin-left: 2rem;
-    }
+    border-radius: 0;
+    margin-bottom: 0;
   }
 }
 
@@ -138,24 +94,35 @@
 }
 
 .desc-wrapper {
-  padding: 2rem;
-  .resul-desc {
+  .result-desc {
     text-align: center;
     display: block;
   }
 }
 
 .buttons {
+  @media only screen and (max-width: 480px) {
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
   align-items: center;
+  margin-top: 25px;
 }
 
 .sns-share-btn {
-  box-shadow: none;
-  background: none;
-  width: fit-content;
+  @media (any-hover: hover) {
+    &:hover {
+      box-shadow: none;
+      background: none;
+    }
+  }
+  box-shadow: none !important;
+  background: none !important;
+  width: fit-content !important;
+  margin-bottom: 0 !important;
 
-  &:hover {
-    box-shadow: none;
-    background: none;
+  &:active {
+    box-shadow: none !important;
+    background: none !important;
   }
 }
